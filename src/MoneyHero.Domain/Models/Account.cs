@@ -2,11 +2,11 @@
 
 public class Account
 {
-    public Account(string name, string description, decimal initialBalance)
+    public Account(string name, decimal initialBalance, string? description)
     {
         Id = Guid.NewGuid();
         Name = name;
-        Description = description;
+        Description = description ?? string.Empty;
         InitialBalance = initialBalance;
     }
 
